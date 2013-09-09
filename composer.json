@@ -1,6 +1,6 @@
 {
 	"name": "nathancox/codeeditorfield",
-	"description": "A super simple convenience module for displaying text and textfields inline in the CMS",
+	"description": "A field for editing code in the SilverStripe CMS using Ace Editor (http://ace.c9.io/)",
 	"type": "silverstripe-module",
 	"homepage": "https://github.com/nathancox/silverstripe-codeeditorfield",
 	"keywords": ["silverstripe", "form", "cms", "formfield"],
