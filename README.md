@@ -3,7 +3,7 @@ SilverStripe CodeEditorField
 
 This module adds a CodeEditorField that uses Ace Editor (http://ace.c9.io/) to let you edit code (mostly HTML or JavaScript).  I comes in two forms:
 
-* a regular CodeEditorField that can be used on an HTMLText field similar to HTMLEditorField
+* A regular CodeEditorField that can be used on an HTMLText field similar to HTMLEditorField
 * An optional replacement code view for TinyMCE that uses a CodeEditorField
 
 
