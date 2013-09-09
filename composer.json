@@ -12,7 +12,7 @@
 		"issues": "https://github.com/nathancox/silverstripe-codeeditorfield/issues"
 	},
 	"require": {
-		"silverstripe/framework": "~3.0"
+		"silverstripe/framework": "~3.1"
 	},
 	"extra": {
 		"screenshots": [
