@@ -1,0 +1,22 @@
+{
+	"name": "nathancox/codeeditorfield",
+	"description": "A super simple convenience module for displaying text and textfields inline in the CMS",
+	"type": "silverstripe-module",
+	"homepage": "https://github.com/nathancox/silverstripe-codeeditorfield",
+	"keywords": ["silverstripe", "form", "cms", "formfield"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{"name": "Nathan Cox","email": "me@nathan.net.nz"}
+	],
+	"support": {
+		"issues": "https://github.com/nathancox/silverstripe-codeeditorfield/issues"
+	},
+	"require": {
+		"silverstripe/framework": "~3.0"
+	},
+	"extra": {
+		"screenshots": [
+			"http://static.flyingmonkey.co.nz/github/silverstripe-codeeditorfield/codeeditorfield-1.png"
+		]
+	}
+}

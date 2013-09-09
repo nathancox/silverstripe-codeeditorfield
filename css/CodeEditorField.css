@@ -1,0 +1,106 @@
+.codeeditor .ace_editor {
+	width:100%;
+	max-width:512px;
+	min-height:150px;
+	
+  border: 1px solid #B3B3B3;
+  border-radius: 4px 4px 4px 4px;
+  
+}
+
+
+
+.stacked.codeeditor .ace_editor {
+	max-width:none;
+}
+
+.codeeditor-button-bar {
+	padding-top:5px;
+}
+
+.codeeditor .ss-ui-button {
+	margin-right:5px;
+}
+.codeeditor .ss-ui-button.active {
+	background: linear-gradient(#FFFFFF, #E6E6E6) repeat scroll 0 0 transparent;
+	border: 1px solid #B3B3B3;
+	box-shadow: 0 0 5px #B3B3B3 inset;
+}
+
+
+
+.field.checkbox.stacked {
+	padding-left:0;
+}
+
+
+
+
+.ui-dialog .htmleditorfield-codeform {
+	position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+	margin:0;
+	padding-bottom:62px;
+}
+	.htmleditorfield-codeform .Actions {
+		position:absolute;
+		bottom:0;
+		
+		right:0;
+		margin:0;
+		text-align:right;
+	}
+
+.htmleditorfield-codeform fieldset {
+	height:100%;
+	width:100%;
+	position:relative;
+}
+
+.htmleditorfield-codeform fieldset .CompositeField {
+	
+}
+	.htmleditorfield-codeform fieldset .CompositeField .Field {
+		
+	}
+
+
+.htmleditorfield-codeform .field.codeeditor {
+	margin:0;
+	padding:0;
+
+	position:absolute;
+		top:40px;
+		bottom:0px;
+		left:0;
+		right:0;
+}
+
+.htmleditorfield-codeform .ace_editor {
+	border:0;
+	border-radius:0;
+
+
+	position:absolute;
+		top:0px;
+		bottom:0px;
+		left:0;
+		right:0;
+
+
+}
+	.htmleditorfield-codeform .codeeditor-button-bar {
+		position:absolute;
+			bottom:-62px;
+			left:0;
+
+    margin:0;
+    min-height:24px;
+    
+    padding: 18px 16px;
+    min-height:30px;
+		
+	}
