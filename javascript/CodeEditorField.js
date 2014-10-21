@@ -38,11 +38,8 @@ $('textarea.codeeditor').entwine({
 		// set the mode (ie syntax highlighting)
 	//	ace.require("ace/mode/"+this.data('mode'));
 		
-
-
-    editor.getSession().setMode("ace/mode/"+this.data('mode'));
-
-//	editor.setTheme("ace/theme/monokai");
+    	editor.getSession().setMode("ace/mode/"+this.data('mode'));
+		editor.setTheme('ace/theme/' + this.data('theme'));
 
 		var lineHeight = (editor.renderer.lineHeight > 1 ? editor.renderer.lineHeight : 16)
 		

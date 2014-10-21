@@ -41,6 +41,9 @@ Using CodeEditorField in getCMSFields:
 	// set the syntax mode to javascript (defaults to html)
 	$codeField->setMode('javascript');
 
+	// optional - set theme (see codeeditorfield/thirdparty/ace/src-noconflict/theme-xxx.js files for available themes)
+	$codeField->setTheme('twilight');
+
 ```
 
 produces
