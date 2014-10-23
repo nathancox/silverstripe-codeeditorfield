@@ -36,10 +36,12 @@ $('textarea.codeeditor').entwine({
 		editor.session.setWrapLimitRange(null, null);
 
 		// set the mode (ie syntax highlighting)
-	//	ace.require("ace/mode/"+this.data('mode'));
-		
-    	editor.getSession().setMode("ace/mode/"+this.data('mode'));
-		editor.setTheme('ace/theme/' + this.data('theme'));
+    editor.getSession().setMode("ace/mode/"+this.data('mode'));
+    
+		// load a theme if one is set
+		if (this.data('theme')) {
+			editor.setTheme('ace/theme/' + this.data('theme'));
+		}
 
 		var lineHeight = (editor.renderer.lineHeight > 1 ? editor.renderer.lineHeight : 16)
 		
