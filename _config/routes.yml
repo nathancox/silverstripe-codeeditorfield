@@ -1,0 +1,6 @@
+---
+Name: codeeditorfield
+---
+Director:
+  rules:
+    "TinyMCECodeEditor//$Action": 'TinyMCECodeEditor'
