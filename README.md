@@ -1,7 +1,7 @@
 SilverStripe CodeEditorField
 ===================================
 
-This module adds a CodeEditorField that uses Ace Editor (http://ace.c9.io/) to let you edit code (mostly HTML or JavaScript).  I comes in two forms:
+This module adds a CodeEditorField that uses Ace Editor (http://ace.c9.io/) to let you edit code (mostly HTML or JavaScript).  It comes in two forms:
 
 * A regular CodeEditorField that can be used on an HTMLText field similar to HTMLEditorField
 * An optional replacement code view for TinyMCE that uses a CodeEditorField
@@ -22,7 +22,7 @@ Documentation
 Installation Instructions
 -------------------------
 
-1. Place the files in a directory called codeeditorfield in the root of your SilverStripe installation
+1. Place the files in a directory called codeeditorfield in the root of your SilverStripe installation. You can most easily do this with `composer require nathancox/codeeditorfield`
 2. Visit yoursite.com/dev/build to rebuild the database
 
 Usage Overview

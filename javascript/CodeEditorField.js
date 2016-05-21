@@ -36,8 +36,8 @@ $('textarea.codeeditor').entwine({
 		editor.session.setWrapLimitRange(null, null);
 
 		// set the mode (ie syntax highlighting)
-    editor.getSession().setMode("ace/mode/"+this.data('mode'));
-    
+		editor.getSession().setMode("ace/mode/"+this.data('mode'));
+
 		// load a theme if one is set
 		if (this.data('theme')) {
 			editor.setTheme('ace/theme/' + this.data('theme'));
