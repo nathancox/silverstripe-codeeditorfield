@@ -1,10 +1,9 @@
 (function($) {
-
 	$.entwine('ss', function($) {
 		$('textarea.codeeditor').entwine({
 			Editor: false,
 
-			onmatch: function() {
+			onmatch: function(e) {
 				var textarea = this;
 
 				// hide the textarea
@@ -13,10 +12,8 @@
 				// create the editor div
 				var divID = this.attr('id') + '_Ace';
 				var $div = this.getEditorEl();
-				
+
 				$div.insertAfter(this);
-
-
 				ace.config.set('modePath', this.data('ace-path'));
 				ace.config.set('workerPath', this.data('ace-path'));
 				ace.config.set('themePath', this.data('ace-path'));
@@ -28,6 +25,7 @@
 				editor.getSession().setValue(textarea.val());
 				editor.getSession().on('change', function(){
 					textarea.val(editor.getSession().getValue());
+					textarea.change();
 				});
 
 				editor.setAutoScrollEditorIntoView(false);
@@ -42,7 +40,7 @@
 				if (this.data('theme')) {
 					editor.setTheme('ace/theme/' + this.data('theme'));
 				}
-
+				
 				var lineHeight = (editor.renderer.lineHeight > 1 ? editor.renderer.lineHeight : 16)
 
 				$div.css('min-height', lineHeight * textarea.attr('rows') + 35 + 'px');
@@ -50,6 +48,8 @@
 				editor.resize(true);
 				this.setEditor(editor);
 				this.addClass('done');
+
+				this._super(e);
 			},
 
 			getEditorEl: function() {
