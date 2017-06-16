@@ -20,12 +20,12 @@ class CodeEditorField extends TextareaField {
 	 * @var string default_dark_theme
 	 */
 	private static $default_dark_theme = 'monokai';
-	
+
 	/**
 	 * @var string default_light_theme
 	 */
 	private static $default_light_theme = 'github';
-	
+
 	/**
 	 * @var string mode
 	 */
@@ -35,12 +35,12 @@ class CodeEditorField extends TextareaField {
 	 * @var string dark_theme
 	 */
 	protected $dark_theme;
-	
+
 	/**
 	 * @var string light_theme
 	 */
 	protected $light_theme;
-	
+
 	/**
 	 * @var string theme
 	 */
@@ -72,7 +72,7 @@ class CodeEditorField extends TextareaField {
 		Requirements::javascript($acePath . "mode-" . $this->getMode() . ".js");
 		Requirements::javascript("codeeditorfield/javascript/CodeEditorField.js");
 		Requirements::css("codeeditorfield/css/CodeEditorField.css");
-		
+
 		return parent::Field($properties);
 	}
 
@@ -80,7 +80,7 @@ class CodeEditorField extends TextareaField {
 		$this->mode = $mode;
 		return $this;
 	}
-	
+
 	function getMode() {
 		return $this->mode ? $this->mode : $this->config()->get('default_mode');
 	}
@@ -89,7 +89,7 @@ class CodeEditorField extends TextareaField {
 		$this->theme = $theme;
 		return $this;
 	}
-	
+
 	function getTheme() {
 		if ($this->getDefaultTheme()){
 			return $this->theme ? $this->theme : $this->config()->get('default_theme');
@@ -111,6 +111,6 @@ class CodeEditorField extends TextareaField {
 	}
 
 	function getAcePath() {
-		return basename(dirname(__DIR__)) . '/thirdparty/ace/src-noconflict/';
+		return basename(dirname(__DIR__)) . '/thirdparty/ace/src-min-noconflict/';
 	}
 }
