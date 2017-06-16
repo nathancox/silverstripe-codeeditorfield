@@ -12,7 +12,7 @@
 
 .codeeditor-button-bar {
 	padding-top:5px;
-	width: 512px;
+	/*width: 512px;*/
 }
 
 .codeeditor .ss-ui-button {
@@ -26,6 +26,8 @@
 	text-transform: uppercase;
 	color: #777777;
 	font-style: italic;
+
+    padding:4px 0;
 }
 .codeeditor .ss-ui-button.active {
 	background: linear-gradient(#338dc1, #287099);) repeat scroll 0 0 transparent;

@@ -37,10 +37,15 @@
 				editor.getSession().setMode('ace/mode/' + this.data('mode'));
 
 				// load a theme if one is set
-				if (this.data('theme')) {
-					editor.setTheme('ace/theme/' + this.data('theme'));
-				}
-				
+
+
+                if ($.cookie('codeeditorfield-theme')) {
+                    editor.setTheme('ace/theme/' + $.cookie('codeeditorfield-theme'));
+                } else if (this.data('theme')) {
+                    editor.setTheme('ace/theme/' + this.data('theme'));
+                }
+
+
 				var lineHeight = (editor.renderer.lineHeight > 1 ? editor.renderer.lineHeight : 16)
 
 				$div.css('min-height', lineHeight * textarea.attr('rows') + 35 + 'px');
@@ -95,11 +100,16 @@
 			onclick: function() {
 				var editor = this.getEditor();
 				var data = this.closest('.middleColumn').find('textarea').first();
+                var theme;
 				if (editor.getTheme() === ('ace/theme/' + data.data('dark'))) {
-					editor.setTheme('ace/theme/' + data.data('light'));
+					theme = data.data('light');
 				} else {
-					editor.setTheme('ace/theme/' + data.data('dark'));
+					theme = data.data('dark');
 				}
+                editor.setTheme('ace/theme/' + theme);
+                $.cookie('codeeditorfield-theme', theme);
+
+
 				return false;
 			}
 		});
