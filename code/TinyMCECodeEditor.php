@@ -1,6 +1,6 @@
 <?php
 
-class TinyMCECodeEditor extends Controller {
+class TinyMCECodeEditor extends LeftAndMain {
 
 	public static $allowed_actions = array (
 		'PopupForm'
@@ -8,22 +8,22 @@ class TinyMCECodeEditor extends Controller {
 
 
 	function PopupForm() {
-		
+
 		$form = new Form(
 			$this,
-			"{$this->name}/PopupForm", 
+			"{$this->name}/PopupForm",
 			new FieldList(
 				$headerWrap = new CompositeField(
 					new LiteralField(
-						'Heading', 
+						'Heading',
 						sprintf('<h3 class="htmleditorfield-mediaform-heading insert">%s</h3>',
 							'Edit Source'
 						)
 					)
-					
+
 				),
 				$codeField = new CodeEditorField('TinyMCESource', '')
-				
+
 			),
 			new FieldList(
 				ResetFormAction::create('cancel', 'Cancel')
@@ -37,17 +37,17 @@ class TinyMCECodeEditor extends Controller {
 			)
 		);
 
-		$headerWrap->addExtraClass('CompositeField composite cms-content-header nolabel ');		
+		$headerWrap->addExtraClass('CompositeField composite cms-content-header nolabel ');
 	//	$contentComposite->addExtraClass('tinymce-codeeditor-field content');
 
 		$codeField->addExtraClass('nolabel stacked');
-		
+
 		$form->unsetValidator();
 		$form->loadDataFrom($this);
 		$form->addExtraClass('htmleditorfield-form htmleditorfield-codeform cms-dialog-content');
-		
+
 	//	$this->extend('updateLinkForm', $form);
-		
+
 		return $form;
 
 	}

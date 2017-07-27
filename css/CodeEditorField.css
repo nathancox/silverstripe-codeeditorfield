@@ -68,14 +68,6 @@
 	position:relative;
 }
 
-.htmleditorfield-codeform fieldset .CompositeField {
-
-}
-
-.htmleditorfield-codeform fieldset .CompositeField .Field {
-
-}
-
 .htmleditorfield-codeform .field.codeeditor {
 	margin:0;
 	padding:0;
@@ -103,4 +95,9 @@
 	margin:0;
 	padding: 18px 16px;
 	min-height:30px;
+}
+
+
+.htmleditorfield-acedialog .cms-content-header h3 {
+    padding-top:0;
 }
