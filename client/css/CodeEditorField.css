@@ -1,46 +1,43 @@
+
 .codeeditor .ace_editor {
 	width: 100%;
-	max-width: 512px;
 	min-height: 150px;
-	border: 1px solid #B3B3B3;
-	border-radius: 4px 4px 4px 4px;
+	border: 1px solid #ced3d9;
+	border-radius: .25rem;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 }
 
 .stacked.codeeditor .ace_editor {
 	max-width:none;
 }
 
+
 .codeeditor-button-bar {
 	padding-top:5px;
-	/*width: 512px;*/
-}
-
-.codeeditor .ss-ui-button {
-	margin-right:5px;
 }
 
 #mode-label {
-	display: inline-block;
-	position: relative;
-	float: right;
-	text-transform: uppercase;
-	color: #777777;
-	font-style: italic;
-
+    display: inline-block;
+    position: relative;
+    float: right;
+    text-transform: uppercase;
+    color: #777777;
+    font-size:1em;
     padding:4px 0;
 }
-.codeeditor .ss-ui-button.active {
-	background: linear-gradient(#338dc1, #287099);) repeat scroll 0 0 transparent;
-	color: white;
-	text-shadow: none;
-	border: 1px solid #B3B3B3;
-	box-shadow: 0 0 5px #B3B3B3 inset;
+
+.ace-word-wrap-button input {
+    vertical-align:middle;
 }
 
-.field.checkbox.stacked {
-	padding-left:0;
-}
 
+
+
+
+
+/*
 .ui-dialog .htmleditorfield-codeform {
 	position:absolute;
 	top:0;
@@ -101,3 +98,4 @@
 .htmleditorfield-acedialog .cms-content-header h3 {
     padding-top:0;
 }
+*/
