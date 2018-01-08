@@ -51,6 +51,10 @@
 
                 $div.css('min-height', lineHeight * textarea.attr('rows') + 35 + 'px')
 
+                if (this.hasClass('readonly')) {
+                    editor.setReadOnly(true);
+                }
+
                 editor.resize(true)
                 this.setEditor(editor)
                 this.addClass('done')
