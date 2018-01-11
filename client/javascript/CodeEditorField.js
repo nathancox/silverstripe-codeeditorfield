@@ -32,10 +32,6 @@
                 editor.getSession().setTabSize(2)
                 editor.setShowPrintMargin(false)
                 editor.session.setWrapLimitRange(null, null)
-                if (this.data('wrap') == 1) {
-                    editor.session.setUseWrapMode(true);
-                    this.getWordWrapEl().attr('checked', true);
-                }
 
                 // set the mode (ie syntax highlighting)
                 editor.getSession().setMode('ace/mode/' + this.data('mode'))
@@ -50,10 +46,6 @@
                 var lineHeight = (editor.renderer.lineHeight > 1 ? editor.renderer.lineHeight : 16)
 
                 $div.css('min-height', lineHeight * textarea.attr('rows') + 35 + 'px')
-
-                if (this.hasClass('readonly')) {
-                    editor.setReadOnly(true);
-                }
 
                 editor.resize(true)
                 this.setEditor(editor)

@@ -41,16 +41,16 @@ CodeEditorField:
     # These are the pre-defined defaults for dark/light themes
     default_dark_theme: 'monokai'
     default_light_theme: 'github'
-
+    
     # This will overwrite the above settings
     default_theme: 'tomorrow'
-
+    
 ```
 
 Using CodeEditorField in getCMSFields:
 
 ```php
-
+	
 $fields->addFieldToTab('Root.Content', $codeField = new CodeEditorField('Configuration', 'Configuration'));
 // set the field to use the full width of the CMS (optional, not included in screenshot)
 $codeField->addExtraClass('stacked');
@@ -64,8 +64,6 @@ $codeField->setMode('yaml');
 // optional - set theme (see codeeditorfield/thirdparty/ace/src-noconflict/theme-xxx.js files for available themes)
 $codeField->setTheme('twilight');
 
-// optional - enabled wordwrap by default
-$codeField->setWrap(true);
 ```
 
 produces the following:
@@ -82,7 +80,7 @@ To replace the code editor in TinyMCE:
 // copy this into your project's getCMSFields
 
 HtmlEditorConfig::get('cms')->enablePlugins(array(
-    'aceeditor' => sprintf('../../../codeeditorfield/javascript/tinymce/editor_plugin_src.js')
+	'aceeditor' => sprintf('../../../codeeditorfield/javascript/tinymce/editor_plugin_src.js')
 ));
 HtmlEditorConfig::get('cms')->insertButtonsBefore('fullscreen', 'aceeditor');
 HtmlEditorConfig::get('cms')->removeButtons('code');

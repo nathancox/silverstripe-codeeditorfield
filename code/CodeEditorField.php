@@ -52,74 +52,51 @@ class CodeEditorField extends Forms\TextareaField {
     protected $theme;
 
     /**
-     * @var string wrap
-     */
-    protected $wrap;
-
-    /**
+     * @config
      * @var int Visible number of text lines.
      */
     protected $rows = 12;
 
-    public function getAttributes()
-    {
+
+    public function getAttributes() {
         return array_merge(
             parent::getAttributes(),
             array(
                 'data-mode' => $this->getMode(),
-                'data-ace-path' => '/resources/nathancox/codeeditorfield/thirdparty/ace/src-min-noconflict',
+                'data-ace-path' => $this->getAcePath(),
                 'data-theme' => $this->getTheme(),
                 'data-dark' => $this->getDarkTheme(),
-                'data-light' => $this->getLightTheme(),
-                'data-wrap' => $this->getWrap() ? '1' : ' 0',
+                'data-light' => $this->getLightTheme()
             )
         );
     }
 
-    public function Field($properties = array())
-    {
-        Requirements::javascript(
-            'nathancox/codeeditorfield: /thirdparty/ace/src-min-noconflict/ace.js'
-        );
-        Requirements::javascript(
-            'nathancox/codeeditorfield: /thirdparty/ace/src-min-noconflict/mode-' . $this->getMode() . '.js'
-        );
-        Requirements::javascript('nathancox/codeeditorfield: /client/javascript/CodeEditorField.js');
-        Requirements::css('nathancox/codeeditorfield: /client/css/CodeEditorField.css');
+    public function Field($properties = array()) {
+        $acePath = $this->getAcePath();
+
+        Requirements::javascript($acePath . "ace.js");
+        Requirements::javascript($acePath . "mode-" . $this->getMode() . ".js");
+        Requirements::javascript(basename(dirname(__DIR__)) . "/client/javascript/CodeEditorField.js");
+        Requirements::css(basename(dirname(__DIR__)) . "/client/css/CodeEditorField.css");
 
         return parent::Field($properties);
     }
 
-    public function setMode($mode)
-    {
+    public function setMode($mode) {
         $this->mode = $mode;
         return $this;
     }
 
-    public function getMode()
-    {
+    public function getMode() {
         return $this->mode ? $this->mode : $this->config()->get('default_mode');
     }
 
-    public function setWrap($wrap)
-    {
-        $this->wrap = $wrap;
-        return $this;
-    }
-
-    public function getWrap()
-    {
-        return $this->wrap;
-    }
-
-    public function setTheme($theme)
-    {
+    public function setTheme($theme) {
         $this->theme = $theme;
         return $this;
     }
 
-    public function getTheme()
-    {
+    public function getTheme() {
         if ($this->getDefaultTheme()) {
             return $this->theme ? $this->theme : $this->config()->get('default_theme');
         } else {
@@ -139,13 +116,9 @@ class CodeEditorField extends Forms\TextareaField {
         return $this->light_theme ? $this->light_theme : $this->config()->get('default_light_theme');
     }
 
-    /**
-     * Returns a readonly version of this field
-     */
-    public function performReadonlyTransformation()
-    {
-        $field = new CodeEditorField($this->name, $this->title, $this->value);
-        $field->setReadonly(true);
-        return $field;
+    public function getAcePath() {
+        return basename(dirname(__DIR__)) . '/thirdparty/ace/src-min-noconflict/';
     }
 }
+
+
