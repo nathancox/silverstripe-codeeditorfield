@@ -76,8 +76,8 @@ class CodeEditorField extends TextareaField {
 
 		Requirements::javascript($acePath . "ace.js");
 		Requirements::javascript($acePath . "mode-" . $this->getMode() . ".js");
-		Requirements::javascript("codeeditorfield/client/javascript/CodeEditorField.js");
-		Requirements::css("codeeditorfield/client/css/CodeEditorField.css");
+		Requirements::javascript("nathancox/codeeditorfield: client/javascript/CodeEditorField.js");
+		Requirements::css("nathancox/codeeditorfield: client/css/CodeEditorField.css");
 
 		return parent::Field($properties);
 	}
@@ -117,7 +117,7 @@ class CodeEditorField extends TextareaField {
 	}
 
 	function getAcePath() {
-		return '_resources/' . basename(dirname(__DIR__)) . '/thirdparty/ace/src-min-noconflict/';
+		return '_resources/vendor/nathancox/codeeditorfield/thirdparty/ace/src-min-noconflict/';
 	}
 
 
