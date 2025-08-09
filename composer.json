@@ -12,11 +12,13 @@
 		"issues": "https://github.com/nathancox/silverstripe-codeeditorfield/issues"
 	},
 	"require": {
-		"silverstripe/framework": "~3.1"
+		"silverstripe/framework": "^4.0 || ^5.0 || ^6.0"
 	},
 	"extra": {
-		"screenshots": [
-			"http://static.flyingmonkey.co.nz/github/silverstripe-codeeditorfield/codeeditorfield-1.png"
-		]
+    "expose": [
+      "client/css",
+      "client/javascript",
+      "thirdparty/ace/src-min-noconflict"
+    ]
 	}
 }

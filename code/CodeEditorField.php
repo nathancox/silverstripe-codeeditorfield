@@ -1,5 +1,11 @@
 <?php
 
+namespace NathanCox\CodeEditorField;
+
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\View\Requirements;
+
+
 class CodeEditorField extends TextareaField {
 
 	private static $allowed_actions = array (
@@ -70,8 +76,8 @@ class CodeEditorField extends TextareaField {
 
 		Requirements::javascript($acePath . "ace.js");
 		Requirements::javascript($acePath . "mode-" . $this->getMode() . ".js");
-		Requirements::javascript("codeeditorfield/javascript/CodeEditorField.js");
-		Requirements::css("codeeditorfield/css/CodeEditorField.css");
+		Requirements::javascript("codeeditorfield/client/javascript/CodeEditorField.js");
+		Requirements::css("codeeditorfield/client/css/CodeEditorField.css");
 
 		return parent::Field($properties);
 	}
@@ -111,6 +117,9 @@ class CodeEditorField extends TextareaField {
 	}
 
 	function getAcePath() {
-		return basename(dirname(__DIR__)) . '/thirdparty/ace/src-min-noconflict/';
+		return '_resources/' . basename(dirname(__DIR__)) . '/thirdparty/ace/src-min-noconflict/';
 	}
+
+
 }
+

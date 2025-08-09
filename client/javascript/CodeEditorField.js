@@ -76,7 +76,7 @@
 			},
 
 			getEditor: function() {
-				return $(this.closest('.middleColumn').find('textarea').first()).getEditor();
+				return $(this.closest('.form-group.codeeditor').find('textarea').first()).getEditor();
 			}
 		});
 
@@ -99,7 +99,7 @@
 		$('.codeeditor .ace-theme-button').entwine({
 			onclick: function() {
 				var editor = this.getEditor();
-				var data = this.closest('.middleColumn').find('textarea').first();
+				var data = this.closest('.form-group.codeeditor').find('textarea').first();
                 var theme;
 				if (editor.getTheme() === ('ace/theme/' + data.data('dark'))) {
 					theme = data.data('light');
