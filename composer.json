@@ -1,6 +1,6 @@
 {
 	"name": "nathancox/codeeditorfield",
-	"description": "A field for editing code in the SilverStripe CMS using Ace Editor (http://ace.c9.io/)",
+	"description": "A field for editing code and JSON in the SilverStripe CMS using Ace Editor (http://ace.c9.io/)",
 	"type": "silverstripe-vendormodule",
 	"homepage": "https://github.com/nathancox/silverstripe-codeeditorfield",
 	"keywords": ["silverstripe", "form", "cms", "formfield"],
