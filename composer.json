@@ -1,7 +1,7 @@
 {
 	"name": "nathancox/codeeditorfield",
 	"description": "A field for editing code in the SilverStripe CMS using Ace Editor (http://ace.c9.io/)",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"homepage": "https://github.com/nathancox/silverstripe-codeeditorfield",
 	"keywords": ["silverstripe", "form", "cms", "formfield"],
 	"license": "BSD-3-Clause",
